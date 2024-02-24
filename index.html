@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roni Immanuel</title>
+    <link rel="shortcut icon" href="/assets/drone-logo.svg" type="svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+  background: #000000; 
+  background: -webkit-linear-gradient(to right, #434343, #000000); 
+  background: linear-gradient(45deg, #434343 5%, #000000 80%);
+}
+    </style>
+
+</head>
+<body>
+<section id="nav">
+    <!-- component -->
+<header class="bg-white bg-opacity-5 text-white shadow-lg hidden md:block">
+  <div class="container mx-auto flex items-center h-24">
+    <a href="" class="flex items-center justify-center">
+      <img class="h-16 opacity-90" src="/assets/camera-drone.png" alt="drone" />
+      <span class="ml-4 uppercase font-black opacity-90">Roni<br/>Immanuel</span>
+    </a>
+    <nav class="contents font-semibold text-base lg:text-lg">
+      <ul class="mx-auto flex items-center">
+        <li class="p-5 xl:p-8 active opacity-50 hover:opacity-85 hover:text-xl hover:shadow-lg">
+          <a href="">
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="p-5 xl:p-8 opacity-50 hover:opacity-85 hover:text-xl hover:shadow-lg">
+          <a href="">
+            <span>About</span>
+          </a>
+        </li>
+        <li class="p-5 xl:p-8 opacity-50 hover:opacity-85 hover:text-xl hover:shadow-lg">
+          <a href="">
+            <span>Projects</span>
+          </a>
+        </li>
+        <li class="p-5 xl:p-8 opacity-50 hover:opacity-85 hover:text-xl hover:shadow-lg">
+          <a href="">
+            <span>Services</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <button class="border border-white rounded-full font-bold px-8 py-2 opacity-50 hover:opacity-85 hover:border-sky-600 hover:shadow-xl">Contact me</button>
+  </div>
+</header>
+</section>
+<section id="hero">
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <model-viewer class="right-56 z-10" height="100%" width="100%" src="/assets/s9_mini_drone.glb" alt="drone" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf" style="height: 100vh !important; width: 80vw !important;"></model-viewer>
+
+    <h1>
+      Hi, Im Roni <br> Drone Pilot
+    </h1>
+</section>
+</body>
+</html>
