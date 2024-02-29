@@ -6,60 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roni Immanuel</title>
     <link rel="shortcut icon" href="assets/drone-logo.svg" type="svg">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
     <style>
-      body {
-  background: #000000; 
-  background: -webkit-linear-gradient(to right, #434343, #000000); 
-  background: linear-gradient(45deg, #434343 5%, #000000 80%);
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+    **{
+        font-family: 'Montserrat';
+    }
+    #frist-page {
+    background: #000000; 
+    background: -webkit-linear-gradient(to right, #434343, #000000); 
+    background: linear-gradient(45deg, #434343 5%, #000000 80%);
+  }
+
+    .userInput.show {
+    width: 80%;
+    height: 80%;
+    display: none;
+    position: relative;
+    outline-offset: -1px;
+    outline-width: 1px;
 }
     </style>
 
 </head>
 <body>
-<section id="nav">
-  <header class="bg-white bg-opacity-10 text-white shadow-lg">
-    <nav class="flex justify-between items-center w-[92%]  mx-auto">
-        <div>
-            <a href="" class="flex items-center justify-center">
-                <img class="h-16 opacity-90" src="assets/camera-drone.png" alt="drone" />
-                <span class="ml-4 uppercase font-black opacity-90">Roni<br/>Immanuel</span>
-            </a>
-        </div>
-        <div
-            class="nav-links duration-500 md:static absolute bg-white bg-opacity-5 md:bg-transparent backdrop-blur-sm rounded-lg md:min-h-fit min-h-[30vh] left-48 md:left-0 top-[-100%] md:w-auto w-48 ml-6 md:ml-0 flex items-center px-5">
-            <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
-                <li class="hover:underline pointer-events-auto text-lg p-5 xl:p-8 opacity-50 hover:opacity-85 hover:shadow-lg>
-                    <a" href="#">Home</a>
-                </li>
-                <li class="hover:underline pointer-events-auto text-lg p-5 xl:p-8 opacity-50 hover:opacity-85 hover:shadow-lg>
-                    <a" href="#">About</a>
-                </li>
-                <li class="hover:underline pointer-events-auto text-lg p-5 xl:p-8 opacity-50 hover:opacity-85 hover:shadow-lg>
-                    <a" href="#">Projects</a>
-                </li>
-                <li class="hover:underline pointer-events-auto text-lg p-5 xl:p-8 opacity-50 hover:opacity-85 hover:shadow-lg>
-                    <a" href="#">Services</a>
-                </li>
-            </ul>
-        </div>
-        <div class="flex items-center gap-6">
-            <button class="border border-white rounded-full font-bold px-4 py-2 opacity-50 hover:opacity-85 hover:border-sky-600 hover:shadow-xl">Contact me</button>
-            <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
-        </div>
-</header>
+<section id="frist-page">
+    <section id="nav">
+    <header class="bg-white bg-opacity-10 text-white shadow-lg">
+        <nav class="flex justify-between items-center w-[92%] mx-auto">
+            <div>
+                <a href="" class="flex items-center justify-center">
+                    <img class="h-16 opacity-90" src="assets/camera-drone.png" alt="drone" />
+                    <span class="ml-4 uppercase font-black opacity-90">Roni<br/>Immanuel</span>
+                </a>
+            </div>
+            <div
+                class="nav-links duration-500 md:static absolute bg-white bg-opacity-5 md:bg-transparent backdrop-blur-sm rounded-lg md:min-h-fit min-h-[30vh] left-48 md:left-0 top-[-100%] md:w-auto w-48 ml-6 md:ml-0 flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li class="hover:underline pointer-events-auto text-lg p-5 xl:p-8 opacity-50 hover:opacity-85 hover:shadow-lg>
+                        <a" href="#">Home</a>
+                    </li>
+                    <li class="hover:underline pointer-events-auto text-lg p-5 xl:p-8 opacity-50 hover:opacity-85 hover:shadow-lg>
+                        <a" href="#">About</a>
+                    </li>
+                    <li class="hover:underline pointer-events-auto text-lg p-5 xl:p-8 opacity-50 hover:opacity-85 hover:shadow-lg>
+                        <a" href="#">Projects</a>
+                    </li>
+                    <li class="hover:underline pointer-events-auto text-lg p-5 xl:p-8 opacity-50 hover:opacity-85 hover:shadow-lg>
+                        <a" href="#">Services</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="border border-white rounded-full font-bold px-4 py-2 opacity-50 hover:opacity-85 hover:border-sky-600 hover:shadow-xl">Contact me</button>
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+    </header>
+    </section>
+    <section id="hero" class="relative flex items-center justify-center h-lvh overflow-hidden relative">
+    <h1 class="z-10 text-8xl font-black text-white text-center absolute bottom-40 tracking-widest leading-snug" style="bottom: 650px;">
+        Hi, Im Roni <br> Drone Pilot
+    </h1>
+    <div class="drone">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+        <model-viewer class="z-0" src="assets/s9_mini_drone.glb" alt="drone" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf" style="height: 100vh !important; width: 100vw !important;"></model-viewer>
+    </div>
+    </section>
 </section>
-<section id="hero">
-  <h1 class="z-10 text-3xl text-white">
-    Hi, Im Roni <br> Drone Pilot
-  </h1>
-  <div class="drone">
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-    <model-viewer class="z-0 md:right-56" height="100%" width="100%" src="assets/s9_mini_drone.glb" alt="drone" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf" style="height: 100vh !important; width: 100vw !important;"></model-viewer>
-  </div>
+<section id="second-page" class="bg-sky-600">
+
 </section>
 
 <script>
@@ -68,6 +88,18 @@
       e.name = e.name === 'menu' ? 'close' : 'menu'
       navLinks.classList.toggle('top-[9%]')
   }
+
+  document.addEventListener('DOMContentLoaded', function () {
+        const modelViewer = document.querySelector('model-viewer');
+        if (modelViewer && modelViewer.shadowRoot) {
+            const shadowRoot = modelViewer.shadowRoot;
+            const userInput = shadowRoot.querySelector('.userInput');
+            
+            userInput.style.width = '70%';
+            userInput.style.height = '70%';
+            // userInput.style.left = '3%';
+        }
+    });
 </script>
 
 </body>
