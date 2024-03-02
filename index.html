@@ -19,12 +19,6 @@
         padding: 0;
     }
 
-    #frist-page {
-    background: #000000; 
-    background: -webkit-linear-gradient(to right, #434343, #000000); 
-    background: linear-gradient(45deg, #434343 5%, #000000 80%);
-  }
-
     .userInput.show {
     width: 80%;
     height: 80%;
@@ -37,12 +31,12 @@
 
 </head>
 <body>
-<section id="frist-page">
+<section id="home" class="bg-zinc-950">
     <section id="nav">
     <header class="bg-white bg-opacity-5 text-white shadow-lg">
-        <nav class="flex backdrop-blur-sm border-b justify-between items-center w-[92%] mx-auto md:fixed z-30" style="right: 0; left: 1px;">
+        <nav class="flex backdrop-blur-sm border-b justify-between items-center w-[92%] mx-auto md:fixed z-30 mix-blend-difference" style="right: 0; left: 1px;">
             <div>
-                <a href="" class="flex items-center justify-center">
+                <a href="#home" class="flex items-center justify-center">
                     <img class="h-16 opacity-90" src="assets/camera-drone.png" alt="drone" />
                     <span class="ml-4 uppercase font-black opacity-90">Roni<br/>Immanuel</span>
                 </a>
@@ -50,17 +44,17 @@
             <div
                 class="nav-links duration-500 md:static absolute bg-white bg-opacity-5 md:bg-transparent backdrop-blur-sm rounded-lg md:min-h-fit min-h-[30vh] left-48 md:left-0 top-[-100%] md:w-auto w-48 ml-6 md:ml-0 flex items-center px-5">
                 <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
-                    <li class="hover:underline pointer-events-auto text-lg p-5 xl:p-8 opacity-50 hover:opacity-85 hover:shadow-lg>
-                        <a" href="#">Home</a>
+                    <li class="hover:underline pointer-events-auto text-lg p-5 xl:p-8 opacity-50 hover:text-blueGray-500 hover:opacity-100 hover:shadow-lg>
+                        <a" href="#hero">Home</a>
                     </li>
-                    <li class="hover:underline pointer-events-auto text-lg p-5 xl:p-8 opacity-50 hover:opacity-85 hover:shadow-lg>
-                        <a" href="#">About</a>
+                    <li class="hover:underline pointer-events-auto text-lg p-5 xl:p-8 opacity-50 hover:text-blueGray-500 hover:opacity-100 hover:shadow-lg>
+                        <a" href="#about">About</a>
                     </li>
-                    <li class="hover:underline pointer-events-auto text-lg p-5 xl:p-8 opacity-50 hover:opacity-85 hover:shadow-lg>
-                        <a" href="#">Projects</a>
+                    <li class="hover:underline pointer-events-auto text-lg p-5 xl:p-8 opacity-50 hover:text-blueGray-500 hover:opacity-100 hover:shadow-lg>
+                        <a" href="#project">Projects</a>
                     </li>
-                    <li class="hover:underline pointer-events-auto text-lg p-5 xl:p-8 opacity-50 hover:opacity-85 hover:shadow-lg>
-                        <a" href="#">Services</a>
+                    <li class="hover:underline pointer-events-auto text-lg p-5 xl:p-8 opacity-50 hover:text-blueGray-500 hover:opacity-100 hover:shadow-lg>
+                        <a" href="#services">Services</a>
                     </li>
                 </ul>
             </div>
@@ -70,27 +64,304 @@
             </div>
     </header>
     </section>
-    <section id="hero" class="relative flex items-center justify-center h-lvh overflow-hidden relative">
-        <h1 class="z-10 text-6xl md:text-8xl font-black text-white text-center fixed md:bottom-40 md:tracking-widest leading-normal md:leading-snug" style="bottom: 600px;">
-            Hi, Im Roni <br> Drone Pilot
-        </h1>
-        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-        <model-viewer class="z-0" src="assets/s9_mini_drone.glb" alt="drone" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf" style="height: 100vh !important; width: 100vw !important;"></model-viewer>
+    <section id="hero" class="relative flex items-center justify-center h-full overflow-hidden relative">
+            <h1 class="z-10 text-6xl md:text-8xl font-black text-white text-center absolute md:bottom-40 md:tracking-widest leading-normal md:leading-snug" style="bottom:550px;">
+                Hi, Im Roni <br> Drone Pilot
+            </h1>
+            <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+            <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+            <model-viewer class="z-0 md:top-32" src="assets/s9_mini_drone.glb" alt="drone" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf" style="height: 100vh !important; width: 100vw !important;"></model-viewer>
     </section>
 </section>
-<section id="second-page" class="bg-sky-600 h-lvh z-20 bg-contain absolute">
-    <h1 class="text-8xl font-black ">hello world</h1>
+<section id="about" class="bg-gray-300 h-screen md:h-96 bg-fixed" style="background-image: url('assets/drone-background.jpg');">
+    <div class="mx-16 grid place-items-center h-screen md:h-96 w-fit">
+        <div class="bg-white/30 backdrop-blur-md rounded-2xl h-scren md:h-80 p-8 border-gray-900 border">
+            <h1 class="font-bold text-2xl">My Story</h1>
+            <p class="text-justify indent-8 text-base font-medium text- mt-2 leading-loose">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, illo placeat obcaecati, animi eaque necessitatibus unde repellendus itaque fugit debitis at et eveniet quidem recusandae fuga sapiente! Ducimus iure, hic quae dolorem, eaque illo suscipit recusandae culpa doloremque aspernatur maxime provident natus beatae nemo cum animi deserunt. Dolore excepturi officia rem iusto illo assumenda molestiae odit eius? Reprehenderit, facere alias?</p>
+        </div>
+    </div>
+</section>
+<section id="projects" class="bg-zinc-950 h-full">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <div class="relative flex min-h-screen flex-col mx-16">
+        <div class="min-h-28">
+            <div class="mx-auto py-4">
+                <h2 class="font-black text-9xl text-white uppercase text-center">
+                    My Projects
+                </h2>
+                <div class="gap-6 mt-8 mx-4 md:flex">
+                    <div class="md:w-1/2">
+                        <div class="wrap-video">
+                            <video class="object-cover h-96 w-full bg-black rounded-lg" loop="" >
+                                <source 
+                                    src="https://assets-global.website-files.com/62d57921074baa1ce7275405/648b6bdb802c1efb403e5be5_ZOOM2-transcode.mp4"
+                                    type="video/mp4">
+                            </video>
+                        </div>
+                        <span class="pt-4 grid grid-cols-6 gap-4">
+                            <span class="col-start-1 col-end-3 font-bold text-lg text-white uppercase font-mono">
+                                bodega x new balance
+                            </span>
+                            <span class="col-end-7 col-span-2 text-sm text-slate-500 uppercase font-mono flex justify-end">
+                                <span class="">
+                                    fashion/retail
+                                </span>
+                            </span>
+                        </span>
+                        <span class="block text-slate-400 text-xs uppercase font-mono">
+                                the trail less taken
+                        </span>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="wrap-video">
+                            <video class="object-cover h-96 w-full bg-black rounded-lg" loop="" >
+                                <source 
+                                    src="https://assets-global.website-files.com/62d57921074baa1ce7275405/640fe762f883d05b8f683c6d_HOKABODEGA-transcode.mp4"
+                                    type="video/mp4">
+                            </video>
+                        </div>
+                        <span class="pt-4 grid grid-cols-6 gap-4">
+                            <span class="col-start-1 col-end-3 font-bold text-lg text-white uppercase font-mono">
+                                bodega x hoka
+                            </span>
+                            <span class="col-end-7 col-span-2 text-sm text-slate-500 uppercase font-mono flex justify-end">
+                                <span class="">
+                                    music video
+                                </span>
+                            </span>
+                        </span>
+                        <span class="block text-slate-400 text-xs uppercase font-mono">
+                                the world at large
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gap-6 mt-8 mx-4 md:flex">
+                <div class="md:w-1/2">
+                    <div class="wrap-video">
+                        <video class="object-cover h-96 w-full bg-black rounded-lg" loop="" >
+                            <source 
+                                src="https://assets-global.website-files.com/62d57921074baa1ce7275405/6363f65c00474db467bed81b_Screen%20Recording%202022-11-03%20at%2011018%20PM-transcode.mp4"
+                                type="video/mp4">
+                        </video>
+                    </div>
+                    <span class="pt-4 grid grid-cols-6 gap-4">
+                        <span class="col-start-1 col-end-3 font-bold text-lg text-white uppercase font-mono">
+                            juno
+                        </span>
+                        <span class="col-end-7 col-span-2 text-sm text-slate-500 uppercase font-mono flex justify-end">
+                            <span class="">
+                                music video 
+                            </span>
+                        </span>
+                    </span>
+                    <span class="block text-slate-400 text-xs uppercase font-mono">
+                            grandma cabbage 
+                    </span>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="wrap-video">
+                        <video class="object-cover h-96 w-full bg-black rounded-lg" loop="" >
+                            <source 
+                                src="https://assets-global.website-files.com/62d57921074baa1ce7275405/63c084f55da78823643adbc3_ThePerfectPants-transcode.mp4"
+                                type="video/mp4">
+                        </video>
+                    </div>
+                    <span class="pt-4 grid grid-cols-6 gap-4">
+                        <span class="col-start-1 col-end-3 font-bold text-lg text-white uppercase font-mono">
+                            cala x public 
+                        </span>
+                        <span class="col-end-7 col-span-2 text-sm text-slate-500 uppercase font-mono flex justify-end">
+                            <span class="">
+                                music video
+                            </span>
+                        </span>
+                    </span>
+                    <span class="block text-slate-400 text-xs uppercase font-mono">
+                            transportation the perfect pants
+                    </span>
+                </div>
+            </div>
+            <a href="#home">
+                <button>
+                    <h2 class="font-bold text-5xl text-white text-center uppercase my-16 hover:bg-white hover:text-black    hover:rounded-full hover:px-6">
+                        view more project
+                    </h2>
+                </button>
+            </a>
+        </div>
+    </div>
+</section>
+<section id="services">
+    <div class="bg-slate-100 py-6">
+        <div class="max-w-md mx-auto mb-14 text-center">
+            <h1 class="text-4xl font-semibold mb-4 text-zinc-950 lg:text-5xl"><span class="text-blue-600">Our</span> Services</h1>
+            <p class="text-xl text-gray-500 font-semibold">Choose the service that works best for you</p>
+        </div>
+        <div class="flex flex-col justify-between items-center lg:flex-row lg:items-start mx-16">
+            <div class="w-full flex-1 mt-8 p-8 order-2 bg-white shadow-xl rounded-3xl sm:w-96 lg:w-full lg:order-1 lg:rounded-r-none">
+            <div class="mb-7 pb-7 flex items-center border-b border-gray-300">
+                <img src="https://res.cloudinary.com/williamsondesign/abstract-1.jpg"  alt="" class="rounded-3xl w-20 h-20" />
+                <div class="ml-5">
+                <span class="block text-2xl font-semibold">Basic</span>
+                <span><span class="font-medium text-gray-500 text-xl align-top">$&thinsp;</span><span class="text-3xl font-bold">10 </span></span><span class="text-gray-500 font-medium">/ hours</span>
+                </div>
+            </div>
+            <ul class="mb-7 font-medium text-gray-500">
+                <li class="flex text-lg mb-2">
+                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                <span class="ml-3">Hourly Service <span class="text-black">Rental</span></span>
+                </li>
+                <li class="flex text-lg mb-2">
+                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                <span class="ml-3">Get Full Video <span class="text-black">Without Editing</span></span>
+                </li>
+                <li class="flex text-lg">
+                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                <span class="ml-3"><span class="text-black">Drone Units </span>As Needed</span>
+                </li>
+            </ul>
+            <a href="#home" class="flex justify-center items-center bg-indigo-600 rounded-xl py-5 px-4 text-center text-white text-xl">
+                Choose Plan
+                <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
+            </a>
+            </div>
+            <div class="w-full flex-1 p-8 order-1 shadow-xl rounded-3xl bg-gray-900 text-gray-400 sm:w-96 lg:w-full lg:order-2 lg:mt-0">
+            <div class="mb-8 pb-8 flex items-center border-b border-gray-600">
+                <img src="https://res.cloudinary.com/williamsondesign/abstract-2.jpg"  alt="" class="rounded-3xl w-20 h-20" />
+                <div class="ml-5">
+                <span class="block text-3xl font-semibold text-white">Best Seller</span>
+                <span><span class="font-medium text-xl align-top">$&thinsp;</span><span class="text-3xl font-bold text-white">35 </span></span><span class="font-medium">/ daily</span>
+                </div>
+            </div>
+            <ul class="mb-10 font-medium text-xl">
+                <li class="flex mb-6">
+                <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
+                <span class="ml-3">Daily Service <span class="text-white">Rental</span></span>
+                </li>
+                <li class="flex mb-6">
+                <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
+                <span class="ml-3">Get Full Video <span class="text-white">With Editing</span></span>
+                </li>
+                <li class="flex">
+                <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
+                <span class="ml-3"><span class="text-white">The Best </span>Drone Units</span>
+                </li>
+            </ul>
+            <a href="#home" class="flex justify-center items-center bg-indigo-600 rounded-xl py-6 px-4 text-center text-white text-2xl">
+                Choose Plan
+                <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
+            </a>
+            </div>
+            <div class="w-full flex-1 mt-8 p-8 order-3 bg-white shadow-xl rounded-3xl sm:w-96 lg:w-full lg:order-3 lg:rounded-l-none">
+            <div class="mb-7 pb-7 flex items-center border-b border-gray-300">
+                <img src="https://res.cloudinary.com/williamsondesign/abstract-3.jpg"  alt="" class="rounded-3xl w-20 h-20" />
+                <div class="ml-5">
+                <span class="block text-2xl font-semibold">Normal</span>
+                <span><span class="font-medium text-gray-500 text-xl align-top">$&thinsp;</span><span class="text-3xl font-bold">24 </span></span><span class="text-gray-500 font-medium">/ daily</span>
+                </div>
+            </div>
+            <ul class="mb-7 font-medium text-gray-500">
+                <li class="flex text-lg mb-2">
+                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                <span class="ml-3">Daily Service <span class="text-black">Rental</span></span>
+                </li>
+                <li class="flex text-lg mb-2">
+                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                <span class="ml-3">Get Full Video <span class="text-black">With Editing</span></span>
+                </li>
+                <li class="flex text-lg">
+                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                <span class="ml-3"><span class="text-black">The Best </span>Drone Units</span>
+                </li>
+            </ul>
+            <a href="#home" class="flex justify-center items-center bg-indigo-600 rounded-xl py-5 px-4 text-center text-white text-xl">
+                Choose Plan
+                <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
+            </a>
+            </div>
+        </div>
+    </div>
 </section>
 
+<footer class="relative bg-zinc-950 pt-8 pb-6 text-white">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap text-left lg:text-left">
+        <div class="w-full lg:w-6/12 px-4">
+          <h4 class="text-3xl fonat-semibold">Let's keep in touch!</h4>
+          <h5 class="text-lg mt-0 mb-2">
+            Find me on one of these platforms, I respond 1-2 business days.
+          </h5>
+          <div class="mt-6 lg:mb-0 mb-6">
+            <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+              <i class="fab fa-twitter"></i></button><button class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+              <i class="fab fa-facebook-square"></i></button><button class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+              <i class="fab fa-dribbble"></i></button><button class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+              <i class="fab fa-github"></i>
+            </button>
+          </div>
+        </div>
+        <div class="w-full lg:w-6/12 px-4">
+          <div class="flex flex-wrap items-top mb-6">
+            <div class="w-full lg:w-4/12 px-4 ml-auto">
+              <span class="block uppercase text-sm font-semibold mb-2">Useful Links</span>
+              <ul class="list-unstyled">
+                <li>
+                  <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#home">Home</a>
+                </li>
+                <li>
+                  <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#about">About</a>
+                </li>
+                <li>
+                  <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#projects">Projects</a>
+                </li>
+                <li>
+                  <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#services">Services</a>
+                </li>
+              </ul>
+            </div>
+            <div class="w-full lg:w-4/12 px-4">
+              <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Other Resources</span>
+              <ul class="list-unstyled">
+                <li>
+                  <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">MIT License</a>
+                </li>
+                <li>
+                  <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/terms?ref=njs-profile">Terms &amp; Conditions</a>
+                </li>
+                <li>
+                  <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/privacy?ref=njs-profile">Privacy Policy</a>
+                </li>
+                <li>
+                  <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/contact-us?ref=njs-profile">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 border-blueGray-300">
+      <div class="flex flex-wrap items-center md:justify-between justify-center">
+        <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+          <div class="text-sm text-blueGray-500 font-semibold py-1">
+            Copyright © <span id="get-current-year">2024</span><a href="https://github.com/Fir3fliesss" class="text-blueGray-500 hover:text-red-500" target="_blank"> make with ❤️ by
+            <a href="https://www.linkedin.com/in/gheraldy/" class="text-blueGray-500 hover:text-blueGray-800">Firefliesss </a>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 <script>
-  const navLinks = document.querySelector('.nav-links')
-  function onToggleMenu(e){
+    const navLinks = document.querySelector('.nav-links')
+    function onToggleMenu(e){
       e.name = e.name === 'menu' ? 'close' : 'menu'
       navLinks.classList.toggle('top-[9%]')
-  }
+    }
 
-  document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function () {
         const modelViewer = document.querySelector('model-viewer');
         if (modelViewer && modelViewer.shadowRoot) {
             const shadowRoot = modelViewer.shadowRoot;
@@ -101,7 +372,16 @@
             // userInput.style.left = '3%';
         }
     });
-</script>
 
+    var video = $('.wrap-video').hover(hoverVideo, hideVideo);
+    function hoverVideo(e) {  
+        $('video', this).get(0).play(); 
+    }
+
+    function hideVideo(e) {
+        $('video', this).get(0).pause(); 
+    }
+
+</script>
 </body>
 </html>
