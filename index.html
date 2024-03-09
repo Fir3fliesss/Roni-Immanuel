@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -38,12 +39,12 @@
         <nav class="flex backdrop-blur-sm border-b justify-between items-center w-[92%] mx-auto md:fixed z-30 mix-blend-difference" style="right: 0; left: 1px;">
             <div>
                 <a href="#home" class="flex items-center justify-center">
-                    <img class="h-16 opacity-90" src="assets/camera-drone.png" alt="drone" />
+                    <img class="h-16 opacity-90" src="assets/camera-drone.png" loading="lazy" alt="drone" />
                     <span class="ml-4 uppercase font-black opacity-90">Roni<br/>Immanuel</span>
                 </a>
             </div>
             <div
-                class="nav-links duration-500 md:static absolute bg-white bg-opacity-5 md:bg-transparent backdrop-blur-sm rounded-lg md:min-h-fit min-h-[30vh] left-48 md:left-0 top-[-100%] md:w-auto w-48 ml-6 md:ml-0 flex items-center px-5">
+                class="nav-links duration-500 md:static absolute bg-white bg-opacity-10 md:bg-transparent backdrop-blur-sm rounded-lg md:min-h-fit min-h-[30vh] left-48 md:left-0 top-[-600%] md:w-auto w-48 md:ml-0 flex items-center px-5">
                 <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
                     <li class="hover:underline pointer-events-auto text-lg p-5 xl:p-8 opacity-50 hover:text-blueGray-500 hover:opacity-100 hover:shadow-lg">
                         <a href="#hero">Home</a>
@@ -59,9 +60,11 @@
                     </li>
                 </ul>
             </div>
-            <div class="flex items-center gap-6">
-                <button class="border border-white rounded-full font-bold px-4 py-2 opacity-50 hover:opacity-85 hover:border-sky-600 hover:shadow-xl">Contact me</button>
-                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            <div class="flex items-center gap-2">
+                <a href="https://wa.me/6282213156934?text=Halo,%20saya%20ingin%20bertanya%20tentang%20jasa%20drone/fpv20%anda.">
+                    <button class="border border-white rounded-full font-bold px-4 py-2 mr-5 md:mr-0 opacity-50 hover:opacity-85 hover:border-sky-600 hover:shadow-xl">Contact me</button>
+                </a> 
+                    <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
             </div>
     </header>
     </section>
@@ -71,10 +74,10 @@
             </h1>
             <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
             <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-            <model-viewer class="z-0 md:top-32" src="assets/s9_mini_drone.glb" alt="drone" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf" style="height: 100vh !important; width: 100vw !important;"></model-viewer>
+            <model-viewer class="z-0 md:top-32 lozad" src="assets/s9_mini_drone.glb" alt="drone" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf" style="height: 100vh !important; width: 100vw !important;"></model-viewer>
     </section>
 </section>
-<section id="about" class="bg-gray-300 h-screen md:h-96 bg-fixed" style="background-image: url('assets/drone-background.jpg');">
+<section id="about" class="lozad bg-gray-300 h-screen md:h-96 bg-fixed" style="background-image: url('assets/drone-background.jpg');">
     <div class="mx-16 grid place-items-center h-screen md:h-96 w-fit">
         <div class="bg-white/30 backdrop-blur-md rounded-2xl h-scren md:h-80 p-8 border-gray-900 border">
             <h1 class="font-bold text-2xl">My Story</h1>
@@ -88,13 +91,13 @@
     <div class="relative flex min-h-screen flex-col mx-16">
         <div class="min-h-28">
             <div class="mx-auto py-4">
-                <h2 class="font-black text-9xl text-white uppercase text-center">
+                <h2 class="font-black text-4xl :text-9xl text-white uppercase text-center">
                     My Projects
                 </h2>
                 <div class="gap-6 mt-8 mx-4 md:flex">
                     <div class="md:w-1/2">
                         <div class="wrap-video">
-                            <video class="object-cover h-96 w-full bg-black rounded-lg" loop="" >
+                            <video class="lozad object-cover h-96 w-full bg-black rounded-lg" loading="lazy" loop="" >
                                 <source 
                                     src="https://assets-global.website-files.com/62d57921074baa1ce7275405/648b6bdb802c1efb403e5be5_ZOOM2-transcode.mp4"
                                     type="video/mp4">
@@ -116,7 +119,7 @@
                     </div>
                     <div class="md:w-1/2">
                         <div class="wrap-video">
-                            <video class="object-cover h-96 w-full bg-black rounded-lg" loop="" >
+                            <video class="lozad object-cover h-96 w-full bg-black rounded-lg" loop="" >
                                 <source 
                                     src="https://assets-global.website-files.com/62d57921074baa1ce7275405/640fe762f883d05b8f683c6d_HOKABODEGA-transcode.mp4"
                                     type="video/mp4">
@@ -142,7 +145,7 @@
             <div class="gap-6 mt-8 mx-4 md:flex">
                 <div class="md:w-1/2">
                     <div class="wrap-video">
-                        <video class="object-cover h-96 w-full bg-black rounded-lg" loop="" >
+                        <video class="lozad object-cover h-96 w-full bg-black rounded-lg" loop="" >
                             <source 
                                 src="https://assets-global.website-files.com/62d57921074baa1ce7275405/6363f65c00474db467bed81b_Screen%20Recording%202022-11-03%20at%2011018%20PM-transcode.mp4"
                                 type="video/mp4">
@@ -164,7 +167,7 @@
                 </div>
                 <div class="md:w-1/2">
                     <div class="wrap-video">
-                        <video class="object-cover h-96 w-full bg-black rounded-lg" loop="" >
+                        <video class="lozad object-cover h-96 w-full bg-black rounded-lg" loop="" >
                             <source 
                                 src="https://assets-global.website-files.com/62d57921074baa1ce7275405/63c084f55da78823643adbc3_ThePerfectPants-transcode.mp4"
                                 type="video/mp4">
@@ -185,7 +188,7 @@
                     </span>
                 </div>
             </div>
-            <a href="#home">
+            <a href="https://www.youtube.com/@ronychanel23">
                 <button>
                     <h2 class="font-bold text-5xl text-white text-center uppercase my-16 hover:bg-white hover:text-black    hover:rounded-full hover:px-6">
                         view more project
@@ -213,18 +216,18 @@
             <ul class="mb-7 font-medium text-gray-500">
                 <li class="flex text-lg mb-2">
                 <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
-                <span class="ml-3">Hourly Service <span class="text-black">Rental</span></span>
+                <span class="lozad ml-3">Hourly Service <span class="text-black">Rental</span></span>
                 </li>
                 <li class="flex text-lg mb-2">
                 <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
-                <span class="ml-3">Get Full Video <span class="text-black">Without Editing</span></span>
+                <span class="lozad ml-3">Get Full Video <span class="text-black">Without Editing</span></span>
                 </li>
                 <li class="flex text-lg">
                 <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
-                <span class="ml-3"><span class="text-black">Drone Units </span>As Needed</span>
+                <span class="lozad ml-3"><span class="text-black">Drone Units </span>As Needed</span>
                 </li>
             </ul>
-            <a href="#home" class="flex justify-center items-center bg-indigo-600 rounded-xl py-5 px-4 text-center text-white text-xl">
+            <a href="https://wa.me/6282213156934?text=Halo,%20saya%20tertatik%20dengan%20paket%20basic%20pada20%jasa20%drone/fpv20%anda." class="flex justify-center items-center bg-blue-600 rounded-xl py-5 px-4 text-center text-white text-xl">
                 Choose Plan
                 <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
             </a>
@@ -251,7 +254,7 @@
                 <span class="ml-3"><span class="text-white">The Best </span>Drone Units</span>
                 </li>
             </ul>
-            <a href="#home" class="flex justify-center items-center bg-indigo-600 rounded-xl py-6 px-4 text-center text-white text-2xl">
+            <a href="https://wa.me/6282213156934?text=Halo,%20saya%20tertatik%20dengan%20paket%20best20%seller%20pada20%jasa20%drone/fpv20%anda." class="flex justify-center items-center bg-blue-600 rounded-xl py-6 px-4 text-center text-white text-2xl">
                 Choose Plan
                 <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
             </a>
@@ -278,7 +281,7 @@
                 <span class="ml-3"><span class="text-black">The Best </span>Drone Units</span>
                 </li>
             </ul>
-            <a href="#home" class="flex justify-center items-center bg-indigo-600 rounded-xl py-5 px-4 text-center text-white text-xl">
+            <a href="https://wa.me/6282213156934?text=Halo,%20saya%20tertatik%20dengan%20paket%20normal%20pada20%jasa20%drone/fpv20%anda." class="flex justify-center items-center bg-blue-600 rounded-xl py-5 px-4 text-center text-white text-xl">
                 Choose Plan
                 <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
             </a>
@@ -296,12 +299,9 @@
             Find me on one of these platforms, I respond 1-2 business days.
           </h5>
           <div class="mt-6 lg:mb-0 mb-6">
-            <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-              <i class="fab fa-twitter"></i></button><button class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-              <i class="fab fa-facebook-square"></i></button><button class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-              <i class="fab fa-dribbble"></i></button><button class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-              <i class="fab fa-github"></i>
-            </button>
+            <a href="https://www.facebook.com/roni.imanuel.16">
+                <img src="assets/facebook-icon.svg" alt="facebook-icon" class="lozad w-10">
+            </a>
           </div>
         </div>
         <div class="w-full lg:w-6/12 px-4">
@@ -327,16 +327,16 @@
               <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Other Resources</span>
               <ul class="list-unstyled">
                 <li>
-                  <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">MIT License</a>
+                  <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#home">MIT License</a>
                 </li>
                 <li>
-                  <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/terms?ref=njs-profile">Terms &amp; Conditions</a>
+                  <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#home">Terms &amp; Conditions</a>
                 </li>
                 <li>
-                  <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/privacy?ref=njs-profile">Privacy Policy</a>
+                  <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#home">Privacy Policy</a>
                 </li>
                 <li>
-                  <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/contact-us?ref=njs-profile">Contact Us</a>
+                  <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#home">Contact Us</a>
                 </li>
               </ul>
             </div>
@@ -355,34 +355,6 @@
     </div>
   </footer>
 
-<script>
-    const navLinks = document.querySelector('.nav-links')
-    function onToggleMenu(e){
-      e.name = e.name === 'menu' ? 'close' : 'menu'
-      navLinks.classList.toggle('top-[9%]')
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const modelViewer = document.querySelector('model-viewer');
-        if (modelViewer && modelViewer.shadowRoot) {
-            const shadowRoot = modelViewer.shadowRoot;
-            const userInput = shadowRoot.querySelector('.userInput');
-            
-            userInput.style.width = '70%';
-            userInput.style.height = '70%';
-            // userInput.style.left = '3%';
-        }
-    });
-
-    var video = $('.wrap-video').hover(hoverVideo, hideVideo);
-    function hoverVideo(e) {  
-        $('video', this).get(0).play(); 
-    }
-
-    function hideVideo(e) {
-        $('video', this).get(0).pause(); 
-    }
-
-</script>
+<script src="script.js"></script>
 </body>
 </html>
