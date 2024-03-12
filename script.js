@@ -4,18 +4,6 @@ function onToggleMenu(e){
   navLinks.classList.toggle('top-[150%]')
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const modelViewer = document.querySelector('model-viewer');
-    if (modelViewer && modelViewer.shadowRoot) {
-        const shadowRoot = modelViewer.shadowRoot;
-        const userInput = shadowRoot.querySelector('.userInput');
-        
-        userInput.style.width = '70%';
-        userInput.style.height = '70%';
-        // userInput.style.left = '3%';
-    }
-});
-
 var video = $('.wrap-video').hover(hoverVideo, hideVideo);
 function hoverVideo(e) {  
     $('video', this).get(0).play(); 
@@ -27,3 +15,11 @@ function hideVideo(e) {
 
 const observer = lozad();
 observer.observe();
+
+var typed = new Typed('#element', {
+    strings: ['Drone',
+    'Fpv'],
+    typeSpeed: 50,
+    backSpeed: 50,
+    loop: true
+    });

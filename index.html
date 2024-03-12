@@ -10,6 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -70,14 +71,14 @@
     </section>
     <section id="hero" class="relative flex items-center justify-center h-full overflow-hidden relative">
             <h1 class="z-10 text-6xl md:text-8xl font-black text-white text-center absolute md:bottom-40 md:tracking-widest leading-normal md:leading-snug" style="bottom:550px;">
-                Hi, Im Roni <br> Drone Pilot
+                Hi, Im Roni <br> <span id="element" class="text-blue-600"></span> Pilot
             </h1>
             <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
             <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
             <model-viewer class="z-0 md:top-32 lozad" src="assets/s9_mini_drone.glb" alt="drone" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf" style="height: 100vh !important; width: 100vw !important;"></model-viewer>
     </section>
 </section>
-<section id="about" class="lozad bg-gray-300 h-screen md:h-96 bg-fixed" style="background-image: url('assets/drone-background.jpg');">
+<section id="about" class="lozad bg-gray-300 h-screen md:h-96 bg-fixed" style="background-image: url('assets/drone-bg.jpg');">
     <div class="mx-16 grid place-items-center h-screen md:h-96 w-fit">
         <div class="bg-white/30 backdrop-blur-md rounded-2xl h-scren md:h-80 p-8 border-gray-900 border">
             <h1 class="font-bold text-2xl">My Story</h1>
@@ -207,7 +208,7 @@
         <div class="flex flex-col justify-between items-center lg:flex-row lg:items-start mx-16">
             <div class="w-full flex-1 mt-8 p-8 order-2 bg-white shadow-xl rounded-3xl sm:w-96 lg:w-full lg:order-1 lg:rounded-r-none">
             <div class="mb-7 pb-7 flex items-center border-b border-gray-300">
-                <img src="https://res.cloudinary.com/williamsondesign/abstract-1.jpg"  alt="" class="rounded-3xl w-20 h-20" />
+                <img src="https://res.cloudinary.com/williamsondesign/abstract-1.jpg" loading="lazy" alt="" class="rounded-3xl w-20 h-20" />
                 <div class="ml-5">
                 <span class="block text-2xl font-semibold">Basic</span>
                 <span><span class="font-medium text-gray-500 text-xl align-top">$&thinsp;</span><span class="text-3xl font-bold">10 </span></span><span class="text-gray-500 font-medium">/ hours</span>
@@ -215,26 +216,26 @@
             </div>
             <ul class="mb-7 font-medium text-gray-500">
                 <li class="flex text-lg mb-2">
-                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" loading="lazy"/>
                 <span class="lozad ml-3">Hourly Service <span class="text-black">Rental</span></span>
                 </li>
                 <li class="flex text-lg mb-2">
-                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" loading="lazy"/>
                 <span class="lozad ml-3">Get Full Video <span class="text-black">Without Editing</span></span>
                 </li>
                 <li class="flex text-lg">
-                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" loading="lazy"/>
                 <span class="lozad ml-3"><span class="text-black">Drone Units </span>As Needed</span>
                 </li>
             </ul>
             <a href="https://wa.me/6282213156934?text=Halo,%20saya%20tertatik%20dengan%20paket%20basic%20pada20%jasa20%drone/fpv20%anda." class="flex justify-center items-center bg-blue-600 rounded-xl py-5 px-4 text-center text-white text-xl">
                 Choose Plan
-                <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
+                <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" loading="lazy" class="ml-2" />
             </a>
             </div>
             <div class="w-full flex-1 p-8 order-1 shadow-xl rounded-3xl bg-gray-900 text-gray-400 sm:w-96 lg:w-full lg:order-2 lg:mt-0">
             <div class="mb-8 pb-8 flex items-center border-b border-gray-600">
-                <img src="https://res.cloudinary.com/williamsondesign/abstract-2.jpg"  alt="" class="rounded-3xl w-20 h-20" />
+                <img src="https://res.cloudinary.com/williamsondesign/abstract-2.jpg" loading="lazy" class="rounded-3xl w-20 h-20" />
                 <div class="ml-5">
                 <span class="block text-3xl font-semibold text-white">Best Seller</span>
                 <span><span class="font-medium text-xl align-top">$&thinsp;</span><span class="text-3xl font-bold text-white">35 </span></span><span class="font-medium">/ daily</span>
@@ -242,26 +243,26 @@
             </div>
             <ul class="mb-10 font-medium text-xl">
                 <li class="flex mb-6">
-                <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
+                <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" loading="lazy"/>
                 <span class="ml-3">Daily Service <span class="text-white">Rental</span></span>
                 </li>
                 <li class="flex mb-6">
-                <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
+                <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" loading="lazy"/>
                 <span class="ml-3">Get Full Video <span class="text-white">With Editing</span></span>
                 </li>
                 <li class="flex">
-                <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
+                <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" loading="lazy"/>
                 <span class="ml-3"><span class="text-white">The Best </span>Drone Units</span>
                 </li>
             </ul>
             <a href="https://wa.me/6282213156934?text=Halo,%20saya%20tertatik%20dengan%20paket%20best20%seller%20pada20%jasa20%drone/fpv20%anda." class="flex justify-center items-center bg-blue-600 rounded-xl py-6 px-4 text-center text-white text-2xl">
                 Choose Plan
-                <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
+                <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" loading="lazy"/>
             </a>
             </div>
             <div class="w-full flex-1 mt-8 p-8 order-3 bg-white shadow-xl rounded-3xl sm:w-96 lg:w-full lg:order-3 lg:rounded-l-none">
             <div class="mb-7 pb-7 flex items-center border-b border-gray-300">
-                <img src="https://res.cloudinary.com/williamsondesign/abstract-3.jpg"  alt="" class="rounded-3xl w-20 h-20" />
+                <img src="https://res.cloudinary.com/williamsondesign/abstract-3.jpg" loading="lazy" class="rounded-3xl w-20 h-20" />
                 <div class="ml-5">
                 <span class="block text-2xl font-semibold">Normal</span>
                 <span><span class="font-medium text-gray-500 text-xl align-top">$&thinsp;</span><span class="text-3xl font-bold">24 </span></span><span class="text-gray-500 font-medium">/ daily</span>
@@ -269,21 +270,21 @@
             </div>
             <ul class="mb-7 font-medium text-gray-500">
                 <li class="flex text-lg mb-2">
-                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" loading="lazy"/>
                 <span class="ml-3">Daily Service <span class="text-black">Rental</span></span>
                 </li>
                 <li class="flex text-lg mb-2">
-                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" loading="lazy"/>
                 <span class="ml-3">Get Full Video <span class="text-black">With Editing</span></span>
                 </li>
                 <li class="flex text-lg">
-                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" loading="lazy"/>
                 <span class="ml-3"><span class="text-black">The Best </span>Drone Units</span>
                 </li>
             </ul>
             <a href="https://wa.me/6282213156934?text=Halo,%20saya%20tertatik%20dengan%20paket%20normal%20pada20%jasa20%drone/fpv20%anda." class="flex justify-center items-center bg-blue-600 rounded-xl py-5 px-4 text-center text-white text-xl">
                 Choose Plan
-                <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
+                <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" loading="lazy" class="ml-2" />
             </a>
             </div>
         </div>
@@ -298,11 +299,18 @@
           <h5 class="text-lg mt-0 mb-2">
             Find me on one of these platforms, I respond 1-2 business days.
           </h5>
-          <div class="mt-6 lg:mb-0 mb-6">
-            <a href="https://www.facebook.com/roni.imanuel.16">
-                <img src="assets/facebook-icon.svg" alt="facebook-icon" class="lozad w-10">
-            </a>
-          </div>
+            <div class="flex">
+                <div class="mt-6 lg:mb-0 mb-6">
+                    <a href="https://www.facebook.com/roni.imanuel.16">
+                        <img src="assets/facebook-icon.svg" alt="facebook-icon" loading="lazy" class="lozad w-10">
+                    </a>
+                </div>
+                <div class="mt-6 lg:mb-0 mb-6">
+                    <a href="https://www.youtube.com/@ronychanel23">
+                        <img src="assets/youtube-logo.svg" alt="youtube-logo" loading="lazy" class="lozad w-10">
+                    </a>
+                </div>
+            </div>
         </div>
         <div class="w-full lg:w-6/12 px-4">
           <div class="flex flex-wrap items-top mb-6">
@@ -355,6 +363,19 @@
     </div>
   </footer>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const modelViewer = document.querySelector('model-viewer');
+        if (modelViewer && modelViewer.shadowRoot) {
+            const shadowRoot = modelViewer.shadowRoot;
+            const userInput = shadowRoot.querySelector('.userInput');
+            
+            userInput.style.width = '50%';
+            userInput.style.height = '50%';
+            // userInput.style.left = '3%';
+        }
+    });
+</script>
 <script src="script.js"></script>
 </body>
 </html>
